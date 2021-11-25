@@ -1,4 +1,4 @@
-# Three.js Webpack Starter
+# Webpack Starter
 
 ``` bash
 # Install dependencies
