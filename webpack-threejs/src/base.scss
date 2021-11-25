@@ -1,0 +1,23 @@
+$body-color: #222;
+
+@font-face {
+  font-family: "Silka Bold";
+  src: url("silka_bold.woff2") format("woff2"),
+  url("silka_bold.woff2") format("woff");
+}
+
+@font-face {
+  font-family: "Ekselldisplay";
+  src: url("ekselldisplay.woff2") format("woff2"),
+  url("ekselldisplay.woff2") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 14px/1 "Silka Bold", sans-serif;
+  color: $body-color;
+}

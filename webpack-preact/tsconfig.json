@@ -1,0 +1,14 @@
+{
+  "files": [
+    "src/main.tsx"
+  ],
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "jsx": "react",
+    "jsxFactory": "h"
+  },
+  "exclude": ["node_modules"]
+}

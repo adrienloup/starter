@@ -1,0 +1,24 @@
+doctype
+html
+	head
+		title #{title}
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		header			
+			mixin item(title, url)
+				li
+					a(href=url, class=active == title ? 'active' : '')= title
+
+			ul
+				+item('Home', '/')
+				+item('page1', '/page1')
+				+item('page2', '/page2')
+
+		article
+			.content
+				block content
+			.sidebar
+				block sidebar
+
+		footer
+			p footer
