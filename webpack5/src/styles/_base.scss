@@ -1,0 +1,12 @@
+$body-color: #1a78bf;
+
+body {
+  font-family: 'MyFont', sans-serif;
+  font-size: 16px;
+  color: $body-color;
+  background: url('../images/icon.svg') no-repeat center;
+}
+
+.hello {
+  font-size: 30px;
+}
