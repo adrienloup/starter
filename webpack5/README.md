@@ -1,15 +1,27 @@
 # Getting Started
 
-Using Webpack 5 for basic static web development needs.
+Webpack 5 using Babel, PostCSS and Sass with a hot dev server and an optimized build.
 
 ## Requirements
 
 * `node` : `^12 || >=14`
 * `npm`
 
-## Run the following commands in the root directory.
+## Installation
+
 ```bash
 nvm use
 npm i
+```
+
+## Development
+
+```bash
+npm start
+```
+
+## Optimize assets for production
+
+```bash
 npm run build
 ```

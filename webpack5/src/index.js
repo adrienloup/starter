@@ -1,25 +1,26 @@
-console.log('Hello Webpack');
+console.log('Webpack 5 using Babel, PostCSS and Sass with a hot dev server and an optimized build.');
 
 import './styles/index.scss';
 
-import Img from './images/webpack.svg';
+import { example } from './js/example';
 
-import { hello } from './hello';
-hello();
+function heading() {
 
-function component() {
-  const element = document.createElement('div');
+  const element = document.createElement('h1');
 
-  element.innerHTML = 'Hello webpack';
-  element.classList.add('hello');
-
-  const myImg = new Image();
-  myImg.style.width = '200px';
-  myImg.src = Img;
-
-  element.appendChild(myImg);
+  element.textContent = example();
 
   return element;
 }
 
-document.body.appendChild(component());
+function github() {
+
+  const element = document.createElement('div');
+
+  element.innerHTML = '<a href="https://github.com/adrienloup/webpack5" target="_blank" rel="noopener">GitHub Repository</a>';
+  element.classList.add('github');
+
+  return element;
+}
+
+document.body.append(heading(), github());
