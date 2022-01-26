@@ -17,7 +17,7 @@ function github() {
 
   const element = document.createElement('div');
 
-  element.innerHTML = '<a href="https://github.com/adrienloup/webpack5" target="_blank" rel="noopener">GitHub Repository</a>';
+  element.innerHTML = '<a href="https://github.com/adrienloup/starter/tree/main/webpack5" target="_blank" rel="noopener">GitHub Repository</a>';
   element.classList.add('github');
 
   return element;

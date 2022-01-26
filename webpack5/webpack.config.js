@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 
@@ -14,7 +15,7 @@ module.exports = {
   },
   entry: path.resolve(__dirname, './src/index.js'),
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle.[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
@@ -37,15 +38,19 @@ module.exports = {
         }
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(sass|scss|css)$/,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: { sourceMap: true, importLoaders: 1, modules: false },
+            options: {
+              importLoaders: 2,
+              sourceMap: false,
+              modules: false,
+            },
           },
-          { loader: 'postcss-loader', options: { sourceMap: true } },
-          { loader: 'sass-loader', options: { sourceMap: true } },
+          'postcss-loader',
+          'sass-loader',
         ],
       },
       {
@@ -62,6 +67,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './src/html/index.html'),
       filename: 'index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'bundle.[contenthash].css'
     }),
     new CleanWebpackPlugin(),
   ],
