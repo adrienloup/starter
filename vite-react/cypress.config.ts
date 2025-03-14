@@ -6,4 +6,13 @@ export default defineConfig({
     supportFile: 'src/test/support/e2e.ts',
     specPattern: 'src/test/e2e/*.spec.ts',
   },
+  component: {
+    devServer: {
+      framework: 'react',
+      bundler: 'vite',
+    },
+    indexHtmlFile: 'src/test/support/component-index.html',
+    supportFile: 'src/test/support/component.ts',
+    specPattern: 'src/test/component/*.spec.tsx',
+  },
 });

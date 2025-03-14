@@ -10,8 +10,10 @@
     "lint": "eslint .",
     "format": "prettier . --write",
     "lint-and-format": "npm run lint && npm run format",
-    "test:run": "npx cypress run",
-    "test:open": "npx cypress open --e2e"
+    "test:component": "npx cypress run --component",
+    "test:component:open": "npx cypress open --component",
+    "test:e2e": "npx cypress run --e2e",
+    "test:e2e:open": "npx cypress open --e2e"
   },
   "dependencies": {
     "react": "^19.0.0",

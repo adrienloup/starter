@@ -38,11 +38,18 @@ npm run lint:fix
 npm run format
 ```
 
-## Checking Code Tests
+## Checking Component Tests
 
 ```bash
-npm run test:run
-npm run test:open
+npm run test:component
+npm run test:component:open
+```
+
+## Checking E2E Tests
+
+```bash
+npm run test:e2e
+npm run test:e2e:open
 ```
 
 ## What’s Inside?
